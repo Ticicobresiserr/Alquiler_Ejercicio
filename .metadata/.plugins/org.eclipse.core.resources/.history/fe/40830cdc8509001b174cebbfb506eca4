@@ -1,0 +1,39 @@
+package ar.edu.ucc.arqSoft.Alquiler.Alquiler.model;
+
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import ar.edu.ucc.arqSoft.Alquiler.Common.model.GenericObject;
+
+public class Socio extends GenericObject{
+	
+	@NotNull
+	@Size(min = 1, max = 250)
+	@Column(name = "NOMBRE")
+	private String nombre;
+	
+	@NotNull
+	@Size(min = 1, max = 250)
+	@Column(name = "APELLIDO")
+	private String apellido;
+	
+	@NotNull
+	@Column(name = "DNI")
+	private Long dni;
+	
+	@NotNull
+	@Size(min = 1, max = 250)
+	@Column(name = "EMAIL")
+	private String email;
+	
+	//un socio tiene muchos alquileres
+	@OneToMany(mappedBy="alquiler", fetch = FetchType.LAZY)
+	private Set<AlquilerDVD> alquileres;
+	
+
+}

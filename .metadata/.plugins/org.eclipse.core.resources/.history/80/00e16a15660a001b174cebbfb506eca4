@@ -1,0 +1,53 @@
+package ar.edu.ucc.arqSoft.Alquiler.Alquiler.dto;
+
+import java.util.Set;
+
+import ar.edu.ucc.arqSoft.Alquiler.Alquiler.model.AlquilerDVD;
+
+public class SocioResponseDto {
+	
+	private String nombre;
+	private String apellido;
+	private Long dni;
+	private String email;
+	private Set<AlquilerDVD> alquileres;
+	private Long id;
+	
+	public String getNombre() {
+		return nombre;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getApellido() {
+		return apellido;
+	}
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+	public Long getDni() {
+		return dni;
+	}
+	public void setDni(Long dni) {
+		this.dni = dni;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Set<AlquilerDVD> getAlquileres() {
+		return alquileres;
+	}
+	public void setAlquileres(Set<AlquilerDVD> alquileres) {
+		this.alquileres = alquileres;
+	}
+
+}

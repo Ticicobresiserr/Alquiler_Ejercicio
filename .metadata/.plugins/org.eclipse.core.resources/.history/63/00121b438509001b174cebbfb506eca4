@@ -1,0 +1,19 @@
+package ar.edu.ucc.arqSoft.Alquiler.Alquiler.model;
+
+import javax.persistence.OneToMany;
+
+import ar.edu.ucc.arqSoft.Alquiler.Common.model.GenericObject;
+
+public class Alquiler extends GenericObject{
+	
+	@OneToMany(mappedBy="pelicula", fetch = FetchType.LAZY)
+	private Set<Pelicula> peliculas;
+	
+	@NotNull
+	@Column(name = "FECHA_ALQUILER")
+	private Long fecha_alquiler;
+	
+	
+	
+
+}

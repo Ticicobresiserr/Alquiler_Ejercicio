@@ -1,0 +1,35 @@
+package ar.edu.ucc.arqSoft.Alquiler.Alquiler.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import ar.edu.ucc.arqSoft.common.model.GenericObject;
+
+@Entity
+@Table(name = "PELICULA")
+public class Pelicula extends GenericObject{
+	
+	@NotNull
+	@Size(min = 1, max = 250)
+	@Column(name = "TITULO")
+	private String titulo;
+	
+	@NotNull
+	@Size(min = 1, max = 250)
+	@Column(name = "SINOPSIS")
+	private String sinopsis;
+	
+	@NotNull
+	@Column(name = "ANIO")
+	private Long año;
+	
+	
+}

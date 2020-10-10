@@ -1,0 +1,27 @@
+package ar.edu.ucc.arqSoft.Alquiler.Alquiler.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import ar.edu.ucc.arqSoft.Alquiler.Alquiler.dao.AlquilerDao;
+import ar.edu.ucc.arqSoft.Alquiler.Alquiler.dto.AlquilerRequestDto;
+import ar.edu.ucc.arqSoft.Alquiler.Alquiler.dto.AlquilerResponseDto;
+import ar.edu.ucc.arqSoft.Alquiler.Common.dto.ModelDtoConverter;
+
+public class AlquilerService {
+	
+	@Autowired
+	private AlquilerDao alquilerDao;
+
+	
+	public AlquilerResponseDto insertAlquiler(AlquilerRequestDto request) {
+		
+		AlquilerDao alquiler = (Alquiler) new ModelDtoConverter().convertToEntity(new Alquiler(), request);
+		
+		alquilerDao.insert(alquiler);
+		
+		AlquilerResponseDto response = (AlquilerResponseDto) new ModelDtoConverter().convertToDto(alquiler, new AlquilerResponseDto());	
+		
+		return response;
+	}
+
+}
