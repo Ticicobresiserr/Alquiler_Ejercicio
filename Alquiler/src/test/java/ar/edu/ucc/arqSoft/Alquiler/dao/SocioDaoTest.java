@@ -31,7 +31,12 @@ private static final Logger logger = LogManager.getLogger(SocioDaoTest.class);
 		logger.info("Test de Registro de Socio");
 		
 		Socio socio = new Socio();
-		socio.setDni(42358387L);  //que onda esta L???
+		
+		socio.setDni("42358387");
+		socio.setNombre("Ticiana");
+		socio.setApellido("Cobresi");
+		socio.setEmail("tici.cobresi21@gmail.com");
+		
 
 		socioDao.insert(socio);
 		//assertEquals(expected, actual) y return true if: expected.equals( actual ) returns true.

@@ -1,35 +1,24 @@
 package ar.edu.ucc.arqSoft.Alquiler.Alquiler.dto;
 
-import java.util.Date;
-import java.util.Set;
-
-import ar.edu.ucc.arqSoft.Alquiler.Alquiler.model.Pelicula;
-import ar.edu.ucc.arqSoft.Alquiler.Alquiler.model.Socio;
 import ar.edu.ucc.arqSoft.Alquiler.Common.dto.DtoEntity;
 
 public class AlquilerRequestDto implements DtoEntity {
 	
-	private Date fecha_alquiler;
-	private Socio socio;
-	private Set<Pelicula> peliculas;
+	private Long socioid;
+	private Long peliculaid;
 	
-	public Date getFecha_alquiler() {
-		return fecha_alquiler;
+	public Long getSocioid() {
+		return socioid;
 	}
-	public void setFecha_alquiler(Date fecha_alquiler) {
-		this.fecha_alquiler = fecha_alquiler;
+	public void setSocioid(Long socioid) {
+		this.socioid = socioid;
 	}
-	public Socio getSocio() {
-		return socio;
+	public Long getPeliculaid() {
+		return peliculaid;
 	}
-	public void setSocio(Socio socio) {
-		this.socio = socio;
+	public void setPeliculaid(Long peliculaid) {
+		this.peliculaid = peliculaid;
 	}
-	public Set<Pelicula> getPeliculas() {
-		return peliculas;
-	}
-	public void setPeliculas(Set<Pelicula> peliculas) {
-		this.peliculas = peliculas;
-	}
-
+	
+	
 }

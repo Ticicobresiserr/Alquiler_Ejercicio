@@ -24,7 +24,7 @@ public class Socio extends GenericObject{
 	
 	@NotNull
 	@Column(name = "DNI")
-	private Long dni;
+	private String dni;
 	
 	@NotNull
 	@Size(min = 1, max = 250)
@@ -51,14 +51,6 @@ public class Socio extends GenericObject{
 		this.apellido = apellido;
 	}
 
-	public Long getDni() {
-		return dni;
-	}
-
-	public void setDni(Long dni) {
-		this.dni = dni;
-	}
-
 	public String getEmail() {
 		return email;
 	}
@@ -73,6 +65,14 @@ public class Socio extends GenericObject{
 
 	public void setAlquileres(Set<Alquiler> alquileres) {
 		this.alquileres = alquileres;
+	}
+
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
 	}
 
 

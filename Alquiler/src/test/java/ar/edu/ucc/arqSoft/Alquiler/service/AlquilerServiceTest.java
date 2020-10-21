@@ -21,13 +21,10 @@ public class AlquilerServiceTest {
 	@Test
 	public void testInsert() {
 		AlquilerRequestDto request = new AlquilerRequestDto();
-		request.setFecha_alquiler(new java.util.Date(System.currentTimeMillis()));
 		
 		AlquilerResponseDto response = alquilerService.insertAlquiler(request);
-		
-		//aca estaria filtrando para insertar cuando un state  nombre es catamarca?
+	
 		//assertEquals(expected, actual) y return true if: expected.equals( actual ) returns true.
-		
 		//Assert.assertEquals("Catamarca",response.getName());
 		Assert.assertEquals(2, response.getId().longValue());
 		return;

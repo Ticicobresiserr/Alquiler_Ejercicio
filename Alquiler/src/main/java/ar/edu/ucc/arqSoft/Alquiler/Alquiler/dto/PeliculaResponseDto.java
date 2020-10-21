@@ -1,17 +1,11 @@
 package ar.edu.ucc.arqSoft.Alquiler.Alquiler.dto;
 
-import java.util.Set;
+import ar.edu.ucc.arqSoft.Alquiler.Common.dto.DtoEntity;
 
-import ar.edu.ucc.arqSoft.Alquiler.Alquiler.model.Alquiler;
-import ar.edu.ucc.arqSoft.Alquiler.Alquiler.model.Genero;
-
-public class PeliculaResponseDto {
+public class PeliculaResponseDto implements DtoEntity{
 	
-	private String sinopsis;
 	private String titulo;
 	private Long año;
-	private Genero genero;
-	private Set<Alquiler> alquileres;
 	private Long id;
 	
 	public Long getId() {
@@ -21,12 +15,6 @@ public class PeliculaResponseDto {
 		this.id = id;
 	}
 	
-	public String getSinopsis() {
-		return sinopsis;
-	}
-	public void setSinopsis(String sinopsis) {
-		this.sinopsis = sinopsis;
-	}
 	public String getTitulo() {
 		return titulo;
 	}
@@ -39,18 +27,4 @@ public class PeliculaResponseDto {
 	public void setAño(Long año) {
 		this.año = año;
 	}
-	public Genero getGenero() {
-		return genero;
-	}
-	public void setGenero(Genero genero) {
-		this.genero = genero;
-	}
-	public Set<Alquiler> getAlquileres() {
-		return alquileres;
-	}
-	public void setAlquileres(Set<Alquiler> alquileres) {
-		this.alquileres = alquileres;
-	}
-	
-
 }

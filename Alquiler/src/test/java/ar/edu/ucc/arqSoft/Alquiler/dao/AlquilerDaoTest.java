@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ar.edu.ucc.arqSoft.Alquiler.Alquiler.dao.AlquilerDao;
 import ar.edu.ucc.arqSoft.Alquiler.Alquiler.model.Alquiler;
-
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
@@ -26,13 +25,13 @@ private static final Logger logger = LogManager.getLogger(AlquilerDaoTest.class)
 	@Autowired
 	private AlquilerDao alquilerDao;
 
+
 	@Test
 	public void testRegister() {
 
 		logger.info("Test de Registro de Alquiler");
 		
 		Alquiler alquiler = new Alquiler();
-		alquiler.setFecha_alquiler(new java.util.Date(System.currentTimeMillis())); //que onda esto???
 
 		alquilerDao.insert(alquiler);
 		//assertEquals(expected, actual) y return true if: expected.equals( actual ) returns true.

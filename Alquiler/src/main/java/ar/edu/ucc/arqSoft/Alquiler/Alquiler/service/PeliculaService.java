@@ -18,6 +18,8 @@ public class PeliculaService {
 	
 	@Autowired
 	private PeliculaDao peliculaDao;
+	
+	//probar forma manual sin el convertoDto
 
 	public PeliculaResponseDto getPeliculaById(Long id) {
 		Pelicula pelicula = peliculaDao.load(id);
@@ -25,6 +27,7 @@ public class PeliculaService {
 		PeliculaResponseDto response = (PeliculaResponseDto) new ModelDtoConverter().convertToDto(pelicula, new PeliculaResponseDto());	
 		return response;
 	}
+
 	
 	public List<PeliculaResponseDto> getAllPeliculas() {
 		List<Pelicula> peliculas = peliculaDao.getAll();

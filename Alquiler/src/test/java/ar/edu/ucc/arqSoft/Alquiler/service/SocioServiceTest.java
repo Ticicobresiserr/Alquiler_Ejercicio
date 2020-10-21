@@ -22,7 +22,11 @@ public class SocioServiceTest {
 	@Test
 	public void testInsert() {
 		SocioRequestDto request = new SocioRequestDto();
-		request.setDni(42358387L);
+		
+		request.setApellido("Cobresi");
+		request.setApellido("Cobresi");
+		request.setDni("42358387");
+		request.setNombre("Ticiana");
 		
 		SocioResponseDto response =socioService.insertSocio(request);
 		

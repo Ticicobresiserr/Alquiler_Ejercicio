@@ -1,16 +1,12 @@
 package ar.edu.ucc.arqSoft.Alquiler.Alquiler.dto;
 
-import java.util.Set;
+import ar.edu.ucc.arqSoft.Alquiler.Common.dto.DtoEntity;
 
-import ar.edu.ucc.arqSoft.Alquiler.Alquiler.model.Alquiler;
-
-public class SocioRequestDto {
+public class SocioRequestDto implements DtoEntity{
 	
 	private String nombre;
 	private String apellido;
-	private Long dni;
-	private String email;
-	private Set<Alquiler> alquileres;
+	private String dni;
 	
 	public String getNombre() {
 		return nombre;
@@ -24,23 +20,12 @@ public class SocioRequestDto {
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-	public Long getDni() {
+	public String getDni() {
 		return dni;
 	}
-	public void setDni(Long dni) {
+	public void setDni(String dni) {
 		this.dni = dni;
 	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public Set<Alquiler> getAlquileres() {
-		return alquileres;
-	}
-	public void setAlquileres(Set<Alquiler> alquileres) {
-		this.alquileres = alquileres;
-	}
+
 	
 }

@@ -1,14 +1,12 @@
 package ar.edu.ucc.arqSoft.Alquiler.Alquiler.model;
 
 import java.util.Date;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -18,8 +16,9 @@ import ar.edu.ucc.arqSoft.Alquiler.Common.model.GenericObject;
 @Table(name = "ALQUILER")
 public class Alquiler extends GenericObject{
 	
-	@OneToMany(mappedBy="pelicula", fetch = FetchType.LAZY)
-	private Set<Pelicula> peliculas;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name="PELICULA_ID")
+	private Pelicula pelicula;
 	
 	@NotNull
 	@Column(name = "FECHA_ALQUILER")
@@ -28,14 +27,6 @@ public class Alquiler extends GenericObject{
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="SOCIO_ID")
 	private Socio socio;
-
-	public Set<Pelicula> getPeliculas() {
-		return peliculas;
-	}
-
-	public void setPeliculas(Set<Pelicula> peliculas) {
-		this.peliculas = peliculas;
-	}
 
 	public Date getFecha_alquiler() {
 		return fecha_alquiler;
@@ -51,6 +42,14 @@ public class Alquiler extends GenericObject{
 
 	public void setSocio(Socio socio) {
 		this.socio = socio;
+	}
+
+	public Pelicula getPelicula() {
+		return pelicula;
+	}
+
+	public void setPelicula(Pelicula pelicula) {
+		this.pelicula = pelicula;
 	}
 
 	

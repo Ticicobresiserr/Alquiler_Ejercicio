@@ -20,7 +20,7 @@ public class AlquilerController {
     private AlquilerService alquilerService;
 	
 	@RequestMapping(method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces= MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody AlquilerResponseDto saveSatate(@RequestBody AlquilerRequestDto request)
+    public @ResponseBody AlquilerResponseDto saveAlquiler(@RequestBody AlquilerRequestDto request)
     {
         return alquilerService.insertAlquiler(request);
     }

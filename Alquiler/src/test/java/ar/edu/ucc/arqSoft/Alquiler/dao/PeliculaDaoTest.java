@@ -37,14 +37,6 @@ public class PeliculaDaoTest  {
 		return;
 	}
 
-	@Test
-	public void testfindByName() {
-
-		logger.info("Test de busqueda de Pelicula por Nombre");
-		List<Pelicula> peliculas= peliculaDao.findByName("Nemo");
-		Assert.assertEquals(1, peliculas.size());
-		return;
-	}
 	
 	@Test
 	public void testGetAll() {
