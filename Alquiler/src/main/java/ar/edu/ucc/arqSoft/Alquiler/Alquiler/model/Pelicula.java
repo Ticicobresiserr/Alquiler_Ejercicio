@@ -36,7 +36,7 @@ public class Pelicula extends GenericObject{
 	@Column(name = "GENERO")
 	private Genero genero;
 	
-	@OneToMany(mappedBy="alquiler", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy="pelicula", fetch = FetchType.LAZY)
 	private Set<Alquiler> alquileres;
 	
 	

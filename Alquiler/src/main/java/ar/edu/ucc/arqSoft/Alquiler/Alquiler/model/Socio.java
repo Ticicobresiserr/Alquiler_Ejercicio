@@ -3,13 +3,17 @@ package ar.edu.ucc.arqSoft.Alquiler.Alquiler.model;
 import java.util.Set;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import ar.edu.ucc.arqSoft.Alquiler.Common.model.GenericObject;
 
+@Entity
+@Table(name = "SOCIO")
 public class Socio extends GenericObject{
 	
 	@NotNull
@@ -32,7 +36,7 @@ public class Socio extends GenericObject{
 	private String email;
 	
 	//un socio tiene muchos alquileres
-	@OneToMany(mappedBy="alquiler", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy="socio", fetch = FetchType.LAZY)
 	private Set<Alquiler> alquileres;
 	
 	public String getNombre() {
