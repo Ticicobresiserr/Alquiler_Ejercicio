@@ -24,7 +24,7 @@ public class SocioServiceTest {
 		SocioRequestDto request = new SocioRequestDto();
 		
 		request.setApellido("Cobresi");
-		request.setApellido("Cobresi");
+		request.setEmail("tici.cobresi21@gmail.com");
 		request.setDni("42358387");
 		request.setNombre("Ticiana");
 		

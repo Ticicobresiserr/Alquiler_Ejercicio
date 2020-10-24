@@ -21,7 +21,7 @@ public class SocioController {
     private SocioService socioService;
 	
 	@RequestMapping(method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces= MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody SocioResponseDto saveSatate(@RequestBody SocioRequestDto request)
+    public @ResponseBody SocioResponseDto saveSocio(@RequestBody SocioRequestDto request)
     {
         return socioService.insertSocio(request);
     }

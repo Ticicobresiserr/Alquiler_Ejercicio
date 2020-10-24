@@ -6,7 +6,7 @@ public class SocioResponseDto implements DtoEntity{
 	
 	private String nombre;
 	private String apellido;
-	private Long dni;
+	private String dni;
 	private String email;
 	
 	private Long id;
@@ -29,10 +29,11 @@ public class SocioResponseDto implements DtoEntity{
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-	public Long getDni() {
+	
+	public String getDni() {
 		return dni;
 	}
-	public void setDni(Long dni) {
+	public void setDni(String dni) {
 		this.dni = dni;
 	}
 	public String getEmail() {

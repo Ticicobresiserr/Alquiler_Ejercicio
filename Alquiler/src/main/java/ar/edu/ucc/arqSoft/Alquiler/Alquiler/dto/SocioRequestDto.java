@@ -7,6 +7,7 @@ public class SocioRequestDto implements DtoEntity{
 	private String nombre;
 	private String apellido;
 	private String dni;
+	private String email;
 	
 	public String getNombre() {
 		return nombre;
@@ -25,6 +26,12 @@ public class SocioRequestDto implements DtoEntity{
 	}
 	public void setDni(String dni) {
 		this.dni = dni;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	
